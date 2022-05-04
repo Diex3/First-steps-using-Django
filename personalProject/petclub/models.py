@@ -11,6 +11,7 @@ class Person(models.Model):
     class Meta:
         managed = True
 
+
 class Pet(models.Model):
     id = models.AutoField(primary_key=True)
     species = models.CharField(max_length=50)
