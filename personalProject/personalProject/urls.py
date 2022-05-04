@@ -16,9 +16,15 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
-from petclub.views import HelloWorld
+from petclub.views import (
+    HelloWorld,
+    PetView,
+    PersonView,
+)
 
 urlpatterns = [
-    path('hi', HelloWorld.as_view(), name="helloworld"),
+    path('hola', HelloWorld.as_view(), name="helloworld"),
+    path('pets', PetView.as_view(), name="pet"),
+    path('persons', PersonView.as_view(), name="person"),
     path('api-auth/', include('rest_framework.urls'))
 ]
